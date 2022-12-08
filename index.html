@@ -10,7 +10,7 @@
     <body>
         <nav class="navbar bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand text-light">ROAST-Y</a>
+                <a class="navbar-brand nav-item text-light" id="home-link">ROAST-Y</a>
 
                 <ul class="navbar-nav me-auto d-flex flex-row">
                     <li class="nav-item me-2">
@@ -21,7 +21,7 @@
                     </li>
                 </ul>
 
-                <form class="d-flex">
+                <form class="d-flex" id="search-form">
                     <input class="form-control" type="text" placeholder="Search" id="search"/>
                     <button class="btn btn-outline-info ms-1" id="searchBtn">SEARCH</button>
                 </form>
@@ -34,13 +34,18 @@
 
             </div>
 
-            <div class="row mt-3" id="meal-categories" hidden>
+            <div class="row mt-3 mb-3" id="meal-categories" hidden>
                 <h3>CATEGORIES</h3>
             </div>
 
-            <div class="row mt-3" id="meal-countries" hidden>
-                <span class="col-2 me-1 mb-1 badge text-bg-success">Kenyan</span>
+            <div class="row mt-3 mb-3" id="meal-countries" hidden>
+                <h3>COUNTRIES</h3>
             </div>
+
+            <div class="row mt-3 mb-3" id="search-result" hidden>
+                <h3>SEARCH RESULTS</h3>
+            </div>
+
 
         </div>
 
