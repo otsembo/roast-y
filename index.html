@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>roast-y</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+
+    <body>
+        <nav class="navbar bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light">ROAST-Y</a>
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="text-light nav-link" href="#">CATEGORIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-light nav-link" href="#">COUNTRIES</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control" type="text" placeholder="Search" id="search"/>
+                    <button class="btn btn-outline-info ms-1" id="searchBtn">SEARCH</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="container" id="main-container">
+
+            <div class="row" id="random-meal">
+                <div class="card col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="card-img" src="fish.jpg" id="rand-meal-img" />
+                        </div>
+                        <div class="col-6 card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
