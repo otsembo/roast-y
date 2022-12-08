@@ -6,6 +6,37 @@ const CATEGORIES = 'https://www.themealdb.com/api/json/v1/1/categories.php'
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
+    // ROWS DATA
+    const randomMealRow = document.getElementById('random-meal')
+    const mealCategoryRow = document.getElementById('meal-categories')
+    const countriesRow = document.getElementById('meal-countries')
+
+    // LINKS DATA
+    const categoriesLink = document.getElementById('category-link')
+    const countriesLink = document.getElementById('countries-link')
+
+    // CLICK EVENTS FOR LINKS
+    categoriesLink.addEventListener('click', () => {
+        // hide random meal
+        randomMealRow.style.display = "none"
+        // hide countries
+        countriesRow.style.display = "none"
+        // show categories
+        mealCategoryRow.removeAttribute('hidden')
+        mealCategoryRow.style.display = "flex"
+
+    })
+    countriesLink.addEventListener('click', () => {
+        // hide random meal
+        randomMealRow.style.display = "none"
+        // hide categories
+        mealCategoryRow.style.display = "none"
+        // show countries
+        countriesRow.removeAttribute('hidden')
+        countriesRow.style.display = "flex"
+    })
+
     // create random meal element
     const createRandomMeal = (image, name, description) => {
 
@@ -85,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const description = mealData.strInstructions
                 const image = mealData.strMealThumb
                 const mealElement = createRandomMeal(image, name, description)
-                document.getElementById('random-meal').appendChild(mealElement)
+                randomMealRow.appendChild(mealElement)
             })
     }
 
@@ -98,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const categoryElems = categoriesData.map(
                     cat => createCategory(cat.strCategoryThumb, cat.strCategory)
                 )
-                document.getElementById('meal-categories').append(...categoryElems)
+                mealCategoryRow.append(...categoryElems)
             })
     }
 
